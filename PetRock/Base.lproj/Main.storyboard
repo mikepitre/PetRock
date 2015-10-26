@@ -36,6 +36,9 @@
                                     <constraint firstAttribute="width" constant="240" id="Dgo-Kc-vb5"/>
                                     <constraint firstAttribute="height" constant="76" id="FNe-vx-wNM"/>
                                 </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="180" y="-124" width="240" height="137"/>
+                                </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yZJ-6F-Llu">
                                 <rect key="frame" x="209" y="33" width="182" height="50"/>
@@ -66,20 +69,9 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="blf-7y-im5">
-                                <rect key="frame" x="155" y="111" width="290" height="98"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-sd-P5n">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-Za-62l">
-                                        <rect key="frame" x="195" y="0.0" width="95" height="98"/>
-                                        <animations/>
-                                    </imageView>
-                                </subviews>
-                                <animations/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="209" y="-81" width="182" height="50"/>
+                                </variation>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz">
                                 <rect key="frame" x="-80" y="189" width="686" height="367"/>
@@ -89,15 +81,49 @@
                                     <constraint firstAttribute="width" constant="686" id="ba3-Ji-eIb"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="blf-7y-im5">
+                                <rect key="frame" x="155" y="111" width="290" height="98"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-sd-P5n" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-Za-62l" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="95" height="98"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="rRo-v3-dpt"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rRo-v3-dpt"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="rRo-v3-dpt"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="30">
+                                    <rect key="frame" x="485" y="28" width="96" height="226"/>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8lG-bT-cS0"/>
                             <constraint firstAttribute="trailing" secondItem="vlB-Fx-qyz" secondAttribute="trailing" id="9en-hP-bA5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vlB-Fx-qyz" secondAttribute="bottom" id="MMm-26-ciX"/>
                             <constraint firstItem="LHw-vn-nbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qey-1b-tUO"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QtA-YC-bXr"/>
+                            <constraint firstItem="blf-7y-im5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TUf-bs-u2W"/>
+                            <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ue5-ro-KU7"/>
                             <constraint firstAttribute="trailing" secondItem="LHw-vn-nbu" secondAttribute="trailing" id="Y1H-4c-WeT"/>
+                            <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z1l-pB-36f"/>
                             <constraint firstItem="lEF-9i-Fxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-100" id="cOF-Uy-TpT"/>
                             <constraint firstItem="Yzy-gT-ja0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="elQ-QH-xVH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lEF-9i-Fxz" secondAttribute="bottom" constant="44" id="ewr-WX-WAS"/>
@@ -108,9 +134,33 @@
                             <constraint firstItem="vlB-Fx-qyz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iDf-TD-MgU"/>
                             <constraint firstItem="Yzy-gT-ja0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3n-XK-ZQO"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="Yzy-gT-ja0" secondAttribute="bottom" constant="15" id="vkt-tl-IrV"/>
+                            <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="Yzy-gT-ja0" secondAttribute="bottom" constant="15" id="yJp-r8-LLB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8lG-bT-cS0"/>
+                                <exclude reference="QtA-YC-bXr"/>
+                                <exclude reference="TUf-bs-u2W"/>
+                                <exclude reference="Ue5-ro-KU7"/>
+                                <exclude reference="vkt-tl-IrV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="8lG-bT-cS0"/>
+                                <include reference="TUf-bs-u2W"/>
+                                <exclude reference="Z1l-pB-36f"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Ue5-ro-KU7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="foodImg" destination="blf-7y-im5" id="1kU-5v-ykZ"/>
+                        <outlet property="heartImg" destination="blf-7y-im5" id="3d2-lN-n1m"/>
                         <outlet property="monsterImg" destination="lEF-9i-Fxz" id="3RE-D1-Dbd"/>
                     </connections>
                 </viewController>
