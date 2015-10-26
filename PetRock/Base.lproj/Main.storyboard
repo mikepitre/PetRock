@@ -159,9 +159,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="foodImg" destination="blf-7y-im5" id="1kU-5v-ykZ"/>
-                        <outlet property="heartImg" destination="blf-7y-im5" id="3d2-lN-n1m"/>
-                        <outlet property="monsterImg" destination="lEF-9i-Fxz" id="3RE-D1-Dbd"/>
+                        <outlet property="foodImg" destination="Icy-Za-62l" id="bqb-At-gvs"/>
+                        <outlet property="heartImg" destination="Oit-sd-P5n" id="o0f-3Q-JLZ"/>
+                        <outlet property="monsterImg" destination="lEF-9i-Fxz" id="lNk-zX-ZVH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
