@@ -73,7 +73,7 @@
                                     <rect key="frame" x="209" y="-81" width="182" height="50"/>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
                                 <rect key="frame" x="-80" y="189" width="686" height="367"/>
                                 <animations/>
                                 <constraints>
