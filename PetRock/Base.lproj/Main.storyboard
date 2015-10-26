@@ -162,6 +162,9 @@
                         <outlet property="foodImg" destination="Icy-Za-62l" id="bqb-At-gvs"/>
                         <outlet property="heartImg" destination="Oit-sd-P5n" id="o0f-3Q-JLZ"/>
                         <outlet property="monsterImg" destination="lEF-9i-Fxz" id="lNk-zX-ZVH"/>
+                        <outlet property="penalty1Img" destination="EpX-vW-mLF" id="29o-ax-SWG"/>
+                        <outlet property="penalty2Img" destination="93t-gk-3hx" id="Kar-xT-W46"/>
+                        <outlet property="penalty3Img" destination="KZw-3L-Eov" id="PBC-6E-8qn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -42,7 +42,7 @@ class MonsterImg: UIImageView {
         self.animationImages = nil
         
         var imgArray = [UIImage]()
-        for var x = 0; x <= 5; x++ {
+        for var x = 1; x <= 5; x++ {
             let img = UIImage(named: "dead\(x).png")
             imgArray.append(img!)
         }
