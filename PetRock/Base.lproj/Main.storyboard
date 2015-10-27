@@ -111,16 +111,16 @@
                                     <rect key="frame" x="485" y="28" width="96" height="226"/>
                                 </variation>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
-                                <rect key="frame" x="155" y="217" width="280" height="92"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
+                                <rect key="frame" x="160" y="254" width="280" height="92"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="2T7-79-g5z"/>
                                     <constraint firstAttribute="height" constant="92" id="8Ci-Y4-YgH"/>
                                 </constraints>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-kg-PlX">
-                                <rect key="frame" x="127" y="244" width="346" height="48"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-kg-PlX">
+                                <rect key="frame" x="127" y="281" width="346" height="48"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="346" id="Nm9-jS-iHy"/>
