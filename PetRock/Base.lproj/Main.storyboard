@@ -111,19 +111,50 @@
                                     <rect key="frame" x="485" y="28" width="96" height="226"/>
                                 </variation>
                             </stackView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
+                                <rect key="frame" x="155" y="217" width="280" height="92"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="2T7-79-g5z"/>
+                                    <constraint firstAttribute="height" constant="92" id="8Ci-Y4-YgH"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-kg-PlX">
+                                <rect key="frame" x="127" y="244" width="346" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="Nm9-jS-iHy"/>
+                                    <constraint firstAttribute="height" constant="48" id="fDT-bc-JP2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="32"/>
+                                <state key="normal" title="Get a New Rock?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newRockBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsu-Wg-02Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fGu-dn-4OS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="06u-bR-rpC"/>
+                            <constraint firstItem="fGu-dn-4OS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3yw-Jz-zg1"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8lG-bT-cS0"/>
                             <constraint firstAttribute="trailing" secondItem="vlB-Fx-qyz" secondAttribute="trailing" id="9en-hP-bA5"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A63-ks-odP"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gff-oR-WBd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vlB-Fx-qyz" secondAttribute="bottom" id="MMm-26-ciX"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerY" secondItem="fGu-dn-4OS" secondAttribute="centerY" id="QCc-XL-bde"/>
                             <constraint firstItem="LHw-vn-nbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qey-1b-tUO"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QtA-YC-bXr"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TUf-bs-u2W"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ue5-ro-KU7"/>
+                            <constraint firstItem="fGu-dn-4OS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V2P-5m-2Wd"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerX" secondItem="fGu-dn-4OS" secondAttribute="centerX" id="XEk-NU-Fsb"/>
                             <constraint firstAttribute="trailing" secondItem="LHw-vn-nbu" secondAttribute="trailing" id="Y1H-4c-WeT"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z1l-pB-36f"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerX" secondItem="fGu-dn-4OS" secondAttribute="centerX" id="aSh-wH-tfR"/>
                             <constraint firstItem="lEF-9i-Fxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-100" id="cOF-Uy-TpT"/>
                             <constraint firstItem="Yzy-gT-ja0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="elQ-QH-xVH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lEF-9i-Fxz" secondAttribute="bottom" constant="44" id="ewr-WX-WAS"/>
@@ -132,6 +163,9 @@
                             <constraint firstItem="yZJ-6F-Llu" firstAttribute="centerX" secondItem="Yzy-gT-ja0" secondAttribute="centerX" id="guU-02-A0c"/>
                             <constraint firstItem="yZJ-6F-Llu" firstAttribute="centerY" secondItem="Yzy-gT-ja0" secondAttribute="centerY" id="i6L-bd-SIO"/>
                             <constraint firstItem="vlB-Fx-qyz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iDf-TD-MgU"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerX" secondItem="fGu-dn-4OS" secondAttribute="centerX" id="j0V-3a-XJS"/>
+                            <constraint firstItem="AaR-kg-PlX" firstAttribute="centerY" secondItem="fGu-dn-4OS" secondAttribute="centerY" constant="5" id="lgK-dx-SoE"/>
+                            <constraint firstItem="fGu-dn-4OS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQv-OO-8sY"/>
                             <constraint firstItem="Yzy-gT-ja0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3n-XK-ZQO"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="Yzy-gT-ja0" secondAttribute="bottom" constant="15" id="vkt-tl-IrV"/>
                             <constraint firstItem="blf-7y-im5" firstAttribute="top" secondItem="Yzy-gT-ja0" secondAttribute="bottom" constant="15" id="yJp-r8-LLB"/>
@@ -143,6 +177,11 @@
                                 <exclude reference="TUf-bs-u2W"/>
                                 <exclude reference="Ue5-ro-KU7"/>
                                 <exclude reference="vkt-tl-IrV"/>
+                                <exclude reference="A63-ks-odP"/>
+                                <exclude reference="Gff-oR-WBd"/>
+                                <exclude reference="QCc-XL-bde"/>
+                                <exclude reference="XEk-NU-Fsb"/>
+                                <exclude reference="j0V-3a-XJS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -162,6 +201,8 @@
                         <outlet property="foodImg" destination="Icy-Za-62l" id="bqb-At-gvs"/>
                         <outlet property="heartImg" destination="Oit-sd-P5n" id="o0f-3Q-JLZ"/>
                         <outlet property="monsterImg" destination="lEF-9i-Fxz" id="lNk-zX-ZVH"/>
+                        <outlet property="newRockBtn" destination="AaR-kg-PlX" id="uat-5U-0We"/>
+                        <outlet property="newRockPanel" destination="fGu-dn-4OS" id="hzn-R6-0kg"/>
                         <outlet property="penalty1Img" destination="EpX-vW-mLF" id="29o-ax-SWG"/>
                         <outlet property="penalty2Img" destination="93t-gk-3hx" id="Kar-xT-W46"/>
                         <outlet property="penalty3Img" destination="KZw-3L-Eov" id="PBC-6E-8qn"/>
@@ -179,6 +220,7 @@
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="print" width="550" height="83"/>
         <image name="skull" width="95" height="98"/>
     </resources>
 </document>

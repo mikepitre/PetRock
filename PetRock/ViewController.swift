@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
+    @IBOutlet weak var newRockBtn: UIButton!
+    @IBOutlet weak var newRockPanel: UIImageView!
+    
     
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
@@ -78,6 +81,7 @@ class ViewController: UIViewController {
     }
 
     func itemDroppedOnCharacter(notif: AnyObject) {
+        
         monsterHappy = true
         startTimer()
         
@@ -152,9 +156,37 @@ class ViewController: UIViewController {
     }
     
     func gameOver() {
+
         timer.invalidate()
+        
         monsterImg.playDeathAnimation()
         sfxDeath.play()
+        
+        foodImg.hidden = true
+        heartImg.hidden = true
+        
+        newRockBtn.hidden = false
+        newRockPanel.hidden = false
+    
+    }
+    
+    @IBAction func newRockBtnPressed(sender: AnyObject) {
+        restartGame()
+    }
+    
+    
+    func restartGame() {
+        penalties = 0
+        startTimer()
+        
+        penalty1Img.alpha = DIM_ALPHA
+        penalty2Img.alpha = DIM_ALPHA
+        penalty3Img.alpha = DIM_ALPHA
+        
+        newRockBtn.hidden = true
+        newRockPanel.hidden = true
+        
+        monsterImg.playIdleAnimation()
     }
     
 
