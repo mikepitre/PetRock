@@ -73,29 +73,6 @@
                                     <rect key="frame" x="209" y="-81" width="182" height="50"/>
                                 </variation>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
-                                <rect key="frame" x="160" y="254" width="280" height="92"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="2T7-79-g5z"/>
-                                    <constraint firstAttribute="height" constant="92" id="8Ci-Y4-YgH"/>
-                                </constraints>
-                            </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-kg-PlX">
-                                <rect key="frame" x="127" y="276" width="346" height="48"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="346" id="Nm9-jS-iHy"/>
-                                    <constraint firstAttribute="height" constant="48" id="fDT-bc-JP2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Get a New Rock?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newRockBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsu-Wg-02Y"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
                                 <rect key="frame" x="-80" y="189" width="686" height="367"/>
                                 <animations/>
@@ -134,10 +111,33 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="30">
-                                    <rect key="frame" x="485" y="28" width="96" height="226"/>
+                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="0.0">
+                                    <rect key="frame" x="485" y="28" width="96" height="300"/>
                                 </variation>
                             </stackView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
+                                <rect key="frame" x="160" y="254" width="280" height="92"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="2T7-79-g5z"/>
+                                    <constraint firstAttribute="height" constant="92" id="8Ci-Y4-YgH"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaR-kg-PlX">
+                                <rect key="frame" x="127" y="276" width="346" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="Nm9-jS-iHy"/>
+                                    <constraint firstAttribute="height" constant="48" id="fDT-bc-JP2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Get a New Rock?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newRockBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsu-Wg-02Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

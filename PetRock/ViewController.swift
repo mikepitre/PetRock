@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     var timer: NSTimer!
     var monsterHappy = false
     var currentItem: UInt32 = 0
+    var chosenMonster: Int?
     
     var musicPlayer: AVAudioPlayer!
     var sfxBite: AVAudioPlayer!
