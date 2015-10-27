@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -23,6 +24,14 @@ class ViewController: UIViewController {
     
     var penalties = 0
     var timer: NSTimer!
+    var monsterHappy = false
+    var currentItem: UInt32 = 0
+    
+    var musicPlayer: AVAudioPlayer!
+    var sfxBite: AVAudioPlayer!
+    var sfxHeart: AVAudioPlayer!
+    var sfxDeath: AVAudioPlayer!
+    var sfxSkull: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +45,21 @@ class ViewController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
+        do {
+            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            
+            try sfxBite = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("bite", ofType: "wave")!))
+            
+            try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("death", ofType: "wave")!))
+            
+            try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("heart", ofType: "wave")!))
+            
+            try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("skull", ofType: "wave")!))
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+        
         startTimer()
         
     }
@@ -46,7 +70,13 @@ class ViewController: UIViewController {
     }
 
     func itemDroppedOnCharacter(notif: AnyObject) {
+        monsterHappy = true
+        startTimer()
         
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
     }
     
     func startTimer() {
@@ -61,25 +91,47 @@ class ViewController: UIViewController {
     
     func changeGameState() {
         
-        penalties++
+        if !monsterHappy {
+            
+            penalties++
+            
+            if penalties == 1 {
+                penalty1Img.alpha = OPAQUE
+                penalty2Img.alpha = DIM_ALPHA
+            } else if penalties == 2 {
+                penalty2Img.alpha = OPAQUE
+                penalty3Img.alpha = DIM_ALPHA
+            } else if penalties >= 3 {
+                penalty3Img.alpha = OPAQUE
+            } else {
+                penalty1Img.alpha = DIM_ALPHA
+                penalty2Img.alpha = DIM_ALPHA
+                penalty3Img.alpha = DIM_ALPHA
+            }
+            
+            if penalties >= MAX_PENALTIES {
+                gameOver()
+            }
+        }
         
-        if penalties == 1 {
-            penalty1Img.alpha = OPAQUE
-            penalty2Img.alpha = DIM_ALPHA
-        } else if penalties == 2 {
-            penalty2Img.alpha = OPAQUE
-            penalty3Img.alpha = DIM_ALPHA
-        } else if penalties >= 3 {
-            penalty3Img.alpha = OPAQUE
+        let rand = arc4random_uniform(2)
+        
+        if rand == 0 {
+            heartImg.alpha = OPAQUE
+            heartImg.userInteractionEnabled = true
+            
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
         } else {
-            penalty1Img.alpha = DIM_ALPHA
-            penalty2Img.alpha = DIM_ALPHA
-            penalty3Img.alpha = DIM_ALPHA
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            
+            foodImg.alpha = OPAQUE
+            foodImg.userInteractionEnabled = true
         }
         
-        if penalties >= MAX_PENALTIES {
-            gameOver()
-        }
+        currentItem = rand
+        monsterHappy = false
         
     }
     
@@ -87,6 +139,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         monsterImg.playDeathAnimation()
     }
+    
 
 }
 
