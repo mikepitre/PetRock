@@ -60,11 +60,8 @@ class ViewController: UIViewController {
         do {
             
             try sfxBite = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
-            
             try sfxDeath = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("death", ofType: "wav")!))
-            
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
-            
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             
             sfxBite.prepareToPlay()
@@ -185,10 +182,10 @@ class ViewController: UIViewController {
         
         foodImg.hidden = true
         heartImg.hidden = true
+        stoneImg.hidden = true
         
         newRockBtn.hidden = false
         newRockPanel.hidden = false
-    
     }
     
     @IBAction func newRockBtnPressed(sender: AnyObject) {
@@ -207,6 +204,7 @@ class ViewController: UIViewController {
         
         foodImg.hidden = false
         heartImg.hidden = false
+        stoneImg.hidden = false
         
         newRockBtn.hidden = true
         newRockPanel.hidden = true
