@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monsterImg: MonsterImg!
     @IBOutlet weak var foodImg: DragImg!
     @IBOutlet weak var heartImg: DragImg!
+    @IBOutlet weak var stoneImg: DragImg!
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
@@ -41,10 +42,18 @@ class ViewController: UIViewController {
         
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
+        stoneImg.dropTarget = monsterImg
         
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
+        
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = OPAQUE
+        heartImg.userInteractionEnabled = true
+        stoneImg.alpha = DIM_ALPHA
+        stoneImg.userInteractionEnabled = false
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
@@ -85,11 +94,15 @@ class ViewController: UIViewController {
         foodImg.userInteractionEnabled = false
         heartImg.alpha = DIM_ALPHA
         heartImg.userInteractionEnabled = false
+        stoneImg.alpha = DIM_ALPHA
+        stoneImg.userInteractionEnabled = false
         
         if currentItem == 0 {
             sfxHeart.play()
-        } else {
+        } else if currentItem == 1 {
             sfxBite.play()
+        } else {
+            sfxSkull.play()
         }
     }
     
@@ -130,7 +143,7 @@ class ViewController: UIViewController {
             }
         }
         
-        let rand = arc4random_uniform(2)
+        let rand = arc4random_uniform(3)
         
         if rand == 0 {
             heartImg.alpha = OPAQUE
@@ -138,12 +151,24 @@ class ViewController: UIViewController {
             
             foodImg.alpha = DIM_ALPHA
             foodImg.userInteractionEnabled = false
-        } else {
-            heartImg.alpha = DIM_ALPHA
-            heartImg.userInteractionEnabled = false
-            
+            stoneImg.alpha = DIM_ALPHA
+            stoneImg.userInteractionEnabled = false
+        } else if rand == 1 {
             foodImg.alpha = OPAQUE
             foodImg.userInteractionEnabled = true
+            
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            stoneImg.alpha = DIM_ALPHA
+            stoneImg.userInteractionEnabled = false
+        } else {
+            stoneImg.alpha = OPAQUE
+            stoneImg.userInteractionEnabled = true
+            
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
         }
         
         currentItem = rand

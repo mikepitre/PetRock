@@ -73,44 +73,6 @@
                                     <rect key="frame" x="209" y="-81" width="182" height="50"/>
                                 </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
-                                <rect key="frame" x="-80" y="189" width="686" height="367"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="367" id="Pdp-wH-guS"/>
-                                    <constraint firstAttribute="width" constant="686" id="ba3-Ji-eIb"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="blf-7y-im5">
-                                <rect key="frame" x="155" y="111" width="290" height="98"/>
-                                <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-sd-P5n" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
-                                        <animations/>
-                                    </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-Za-62l" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
-                                        <rect key="frame" x="195" y="0.0" width="95" height="98"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="96" id="rRo-v3-dpt"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="rRo-v3-dpt"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="rRo-v3-dpt"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
-                                <animations/>
-                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="30">
-                                    <rect key="frame" x="485" y="28" width="96" height="226"/>
-                                </variation>
-                            </stackView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
                                 <rect key="frame" x="160" y="254" width="280" height="92"/>
                                 <animations/>
@@ -134,6 +96,48 @@
                                     <action selector="newRockBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsu-Wg-02Y"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
+                                <rect key="frame" x="-80" y="189" width="686" height="367"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="Pdp-wH-guS"/>
+                                    <constraint firstAttribute="width" constant="686" id="ba3-Ji-eIb"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="blf-7y-im5">
+                                <rect key="frame" x="131" y="111" width="338" height="100"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-sd-P5n" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="96" height="98"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stone (1)" translatesAutoresizingMaskIntoConstraints="NO" id="RR5-0V-k6j" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
+                                        <rect key="frame" x="121" y="0.0" width="96" height="100"/>
+                                        <animations/>
+                                    </imageView>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-Za-62l" customClass="DragImg" customModule="PetRock" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="1" width="96" height="98"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="rRo-v3-dpt"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rRo-v3-dpt"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="rRo-v3-dpt"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="30">
+                                    <rect key="frame" x="485" y="28" width="96" height="226"/>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -206,6 +210,7 @@
                         <outlet property="penalty1Img" destination="EpX-vW-mLF" id="29o-ax-SWG"/>
                         <outlet property="penalty2Img" destination="93t-gk-3hx" id="Kar-xT-W46"/>
                         <outlet property="penalty3Img" destination="KZw-3L-Eov" id="PBC-6E-8qn"/>
+                        <outlet property="stoneImg" destination="RR5-0V-k6j" id="FoZ-4h-mFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -222,5 +227,6 @@
         <image name="livespanel" width="468" height="137"/>
         <image name="print" width="550" height="83"/>
         <image name="skull" width="95" height="98"/>
+        <image name="stone (1)" width="96" height="100"/>
     </resources>
 </document>
