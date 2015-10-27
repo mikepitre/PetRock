@@ -49,7 +49,6 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
         do {
-            try musicPlayer = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
             
             try sfxBite = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("bite", ofType: "wav")!))
             
@@ -58,9 +57,6 @@ class ViewController: UIViewController {
             try sfxHeart = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("heart", ofType: "wav")!))
             
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
-            
-            musicPlayer.prepareToPlay()
-            musicPlayer.play()
             
             sfxBite.prepareToPlay()
             sfxDeath.prepareToPlay()
@@ -176,12 +172,16 @@ class ViewController: UIViewController {
     
     
     func restartGame() {
+        sfxHeart.play()
         penalties = 0
         startTimer()
         
         penalty1Img.alpha = DIM_ALPHA
         penalty2Img.alpha = DIM_ALPHA
         penalty3Img.alpha = DIM_ALPHA
+        
+        foodImg.hidden = false
+        heartImg.hidden = false
         
         newRockBtn.hidden = true
         newRockPanel.hidden = true
