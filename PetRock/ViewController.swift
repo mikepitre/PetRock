@@ -56,6 +56,14 @@ class ViewController: UIViewController {
             
             try sfxSkull = AVAudioPlayer(contentsOfURL: NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("skull", ofType: "wav")!))
             
+            musicPlayer.prepareToPlay()
+            musicPlayer.play()
+            
+            sfxBite.prepareToPlay()
+            sfxDeath.prepareToPlay()
+            sfxHeart.prepareToPlay()
+            sfxSkull.prepareToPlay()
+            
         } catch let err as NSError {
             print(err.debugDescription)
         }
@@ -77,6 +85,12 @@ class ViewController: UIViewController {
         foodImg.userInteractionEnabled = false
         heartImg.alpha = DIM_ALPHA
         heartImg.userInteractionEnabled = false
+        
+        if currentItem == 0 {
+            sfxHeart.play()
+        } else {
+            sfxBite.play()
+        }
     }
     
     func startTimer() {
@@ -94,6 +108,8 @@ class ViewController: UIViewController {
         if !monsterHappy {
             
             penalties++
+            
+            sfxSkull.play()
             
             if penalties == 1 {
                 penalty1Img.alpha = OPAQUE
@@ -138,6 +154,7 @@ class ViewController: UIViewController {
     func gameOver() {
         timer.invalidate()
         monsterImg.playDeathAnimation()
+        sfxDeath.play()
     }
     
 
