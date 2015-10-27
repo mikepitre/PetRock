@@ -29,6 +29,14 @@
                                     <constraint firstAttribute="height" constant="60" id="yYO-He-vNK"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
+                                <rect key="frame" x="-80" y="189" width="686" height="367"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="Pdp-wH-guS"/>
+                                    <constraint firstAttribute="width" constant="686" id="ba3-Ji-eIb"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livespanel" translatesAutoresizingMaskIntoConstraints="NO" id="Yzy-gT-ja0">
                                 <rect key="frame" x="180" y="20" width="240" height="76"/>
                                 <animations/>
@@ -36,9 +44,6 @@
                                     <constraint firstAttribute="width" constant="240" id="Dgo-Kc-vb5"/>
                                     <constraint firstAttribute="height" constant="76" id="FNe-vx-wNM"/>
                                 </constraints>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="180" y="-124" width="240" height="137"/>
-                                </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yZJ-6F-Llu">
                                 <rect key="frame" x="209" y="33" width="182" height="50"/>
@@ -69,18 +74,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="209" y="-81" width="182" height="50"/>
-                                </variation>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="lEF-9i-Fxz" customClass="MonsterImg" customModule="PetRock" customModuleProvider="target">
-                                <rect key="frame" x="-80" y="189" width="686" height="367"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="367" id="Pdp-wH-guS"/>
-                                    <constraint firstAttribute="width" constant="686" id="ba3-Ji-eIb"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="blf-7y-im5">
                                 <rect key="frame" x="131" y="111" width="338" height="100"/>
                                 <subviews>
@@ -111,9 +105,7 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="0.0">
-                                    <rect key="frame" x="485" y="28" width="96" height="300"/>
-                                </variation>
+                                <variation key="heightClass=compact" axis="vertical" spacing="0.0"/>
                             </stackView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="print" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-dn-4OS">
                                 <rect key="frame" x="160" y="254" width="280" height="92"/>
@@ -130,8 +122,8 @@
                                     <constraint firstAttribute="width" constant="346" id="Nm9-jS-iHy"/>
                                     <constraint firstAttribute="height" constant="48" id="fDT-bc-JP2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Get a New Rock?">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="Get a New Pet Rock?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
