@@ -99,7 +99,7 @@ class ViewController: UIViewController {
         } else if currentItem == 1 {
             sfxBite.play()
         } else {
-            sfxSkull.play()
+            sfxDeath.play()
         }
     }
     
